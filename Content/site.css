@@ -1,0 +1,18 @@
+header
+{
+	padding-top: 20px;
+	padding-bottom: 40px;
+}
+section#overview
+{
+	padding-bottom: 20px;
+}
+
+textarea[readonly],
+input[readonly] {
+	cursor: default;
+}
+
+label.error {
+	color: #B94A48;
+}
