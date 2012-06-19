@@ -3,11 +3,12 @@
 <head>
 	<title>WPA Key Generator</title>
 	<link href="./content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="./content/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
 	<link href="./content/site.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
-	<div class="container-fluid">
+	<div class="container">
 		<header>
 			<h1>Another WPA Key Generator</h1>
 		</header>
@@ -25,7 +26,7 @@
 			</p>
 		</section>
 		
-		<div class="row-fluid">
+		<div class="row">
 			<div class="span12">
 				<form class="form-horizontal" id="generationForm">
 					<fieldset>
@@ -66,20 +67,20 @@
 				</form>
 			</div>
 		</div>
-		<div class="row-fluid">
+		<div class="row">
 			<form class="form-horizontal well">
 				<fieldset>
 					<legend>Results</legend>
 					<div class="control-group">
 						<label class="control-label">Raw Key:</label>
 						<div class="controls">
-							<textarea id="rawKey" rows="3" readonly="readonly" class="span12"></textarea>
+							<textarea id="rawKey" rows="3" readonly="readonly" class="span9"></textarea>
 						</div>
 					</div>
 					<div class="control-group">
 						<label class="control-label">Hex Key:</label>
 						<div class="controls">
-							<textarea id="hexKey" rows="4" readonly="readonly" class="span12"></textarea>
+							<textarea id="hexKey" rows="4" readonly="readonly" class="span9"></textarea>
 						</div>
 					</div>
 				</fieldset>
