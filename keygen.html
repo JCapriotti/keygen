@@ -9,78 +9,78 @@
 <body>
 
 	<div class="container">
-		<header>
-			<h1>Another WPA Key Generator</h1>
-		</header>
+		<div class="span10 offset1">
+			<header>
+				<h1>Another WPA Key Generator</h1>
+			</header>
 		
-		<section id="overview">
-			<p>
-				There are a million WPA key generators out there. However, given the number of devices we have that use wireless connections, I wanted to make a few improvements to help in situations where you cannot simply copy-paste the key:
-			</p>
-			<ol>
-				<li>Remove characters that may appear ambiguous like "l" and "1", "0" and "O", etc.</li>
-				<li>Group sets of similar characters together. I figure there are four groups of similar characters: upper case letters, lower case letters, numbers, and symbols. This makes it easier for smartphone users to enter a key.</li>
-			</ol>
-			<p>
-				Short disclaimer: Key generation takes place completely your browser, with no data transmitted back-and-forth to a web server. In other words, there should be no security concerns.
-			</p>
-		</section>
-		
-		<div class="row">
-			<div class="span12">
-				<form class="form-horizontal" id="generationForm">
-					<fieldset>
-						<legend>Select the type of key you want...</legend>
-						<div class="control-group">
-							<label class="control-label" for="keyLength">Key Length:</label>
-							<div class="controls">
-								<select id="keyLength" name="keyLength">
-									<option value="63">Maximum (63-characters)</option>
-									<option value="20">Minimum (20-characters)</option>
-									<option value="0">Custom</option>
-								</select>
-							</div>
+			<section id="overview">
+				<p>
+					There are a million WPA key generators out there. However, given the number of devices we have that use wireless connections, I wanted to make a few improvements to help in situations where you cannot simply copy-paste the key:
+				</p>
+				<ol>
+					<li>Remove characters that may appear ambiguous like "l" and "1", "0" and "O", etc.</li>
+					<li>Group sets of similar characters together. I figure there are four groups of similar characters: upper case letters, lower case letters, numbers, and symbols. This makes it easier for smartphone users to enter a key.</li>
+				</ol>
+				<p>
+					Short disclaimer: Key generation takes place completely your browser, with no data transmitted back-and-forth to a web server. In other words, there should be no security concerns.
+				</p>
+			</section>
+		</div>		
+
+		<div class="span6 offset3">
+			<form class="form-horizontal" id="generationForm">
+				<fieldset>
+					<legend>Select the type of key you want...</legend>
+					<div class="control-group">
+						<label class="control-label" for="keyLength">Key Length:</label>
+						<div class="controls">
+							<select id="keyLength" name="keyLength">
+								<option value="63">Maximum (63-characters)</option>
+								<option value="20">Minimum (20-characters)</option>
+								<option value="0">Custom</option>
+							</select>
 						</div>
-						<div class="control-group hide" id="customKeyLengthSection">
-							<label class="control-label" for="customKeyLength">Enter Length:</label>
-							<div class="controls">
-								<input id="customKeyLength" name="customKeyLength" type="number" max="2">
-							</div>
+					</div>
+					<div class="control-group hide" id="customKeyLengthSection">
+						<label class="control-label" for="customKeyLength">Enter Length:</label>
+						<div class="controls">
+							<input id="customKeyLength" name="customKeyLength" type="number" max="2">
 						</div>
-						<div class="control-group">
-							<label class="control-label">Options:</label>
-							<div class="controls">
-								<label class="checkbox">
-									No Ambiguous Characters
-									<input type="checkbox" id="noAmbiguous" name="noAmbiguous" checked="checked">
-								</label>
-								<label class="checkbox">
-									Group Similar Characters
-									<input type="checkbox" id="groupSimilar" name="groupSimilar" checked="checked">
-								</label>
-							</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label">Options:</label>
+						<div class="controls">
+							<label class="checkbox">
+								No Ambiguous Characters
+								<input type="checkbox" id="noAmbiguous" name="noAmbiguous" checked="checked">
+							</label>
+							<label class="checkbox">
+								Group Similar Characters
+								<input type="checkbox" id="groupSimilar" name="groupSimilar" checked="checked">
+							</label>
 						</div>
-						<div class="form-actions">
-							<button class="btn btn-primary">Generate</button>
-						</div>
-					</fieldset>
-				</form>
-			</div>
+					</div>
+					<div class="form-actions">
+						<button class="btn btn-primary">Generate</button>
+					</div>
+				</fieldset>
+			</form>
 		</div>
-		<div class="row">
-			<form class="form-horizontal well">
+		<div class="span10 offset1">
+			<form class="form-horizontal" id="results">
 				<fieldset>
 					<legend>Results</legend>
 					<div class="control-group">
 						<label class="control-label">Raw Key:</label>
 						<div class="controls">
-							<textarea id="rawKey" rows="3" readonly="readonly" class="span9"></textarea>
+							<textarea id="rawKey" rows="3" readonly="readonly" class="span8"></textarea>
 						</div>
 					</div>
 					<div class="control-group">
 						<label class="control-label">Hex Key:</label>
 						<div class="controls">
-							<textarea id="hexKey" rows="4" readonly="readonly" class="span9"></textarea>
+							<textarea id="hexKey" rows="4" readonly="readonly" class="span8"></textarea>
 						</div>
 					</div>
 				</fieldset>
